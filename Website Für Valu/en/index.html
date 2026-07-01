@@ -4865,36 +4865,229 @@ document.addEventListener("keydown", event => {
 </script>
 
 
-<div class="social-section">
+<style>
+/* ===== PREMIUM FOOTER REDESIGN ===== */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  padding: 0 24px 24px;
+  overflow: hidden;
+}
 
+.footer-top-divider {
+  width: 100%;
+  max-width: 1000px;
+  height: 1px;
+  margin: 0 auto 32px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), rgba(157,231,255,0.10), rgba(255,255,255,0.08), transparent);
+}
 
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+}
 
+.footer-logo-text {
+  font-family: 'Sora', 'Manrope', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.95);
+  text-transform: uppercase;
+}
 
-  <div class="footer-socials">
-    <a href="https://www.instagram.com/valu.growthmedia_/" target="_blank" rel="noopener" aria-label="ValuGrowthMedia on Instagram">
-      <img src="../Bilder/instagram.png" alt="Instagram">
-    </a>
+.footer-tagline {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  max-width: 280px;
+}
 
-    <a href="https://www.tiktok.com/@valu.growthmedia" target="_blank" rel="noopener" aria-label="ValuGrowthMedia on TikTok">
-      <img src="../Bilder/tiktok.png" alt="TikTok">
-    </a>
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
 
-    <a href="https://www.youtube.com/@VALUGrowthMedia" target="_blank" rel="noopener" aria-label="ValuGrowthMedia on YouTube">
-      <img src="../Bilder/youtube.png" alt="YouTube">
-    </a>
+.footer-social-link {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.045);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.22);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+}
+
+.footer-social-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.footer-social-link:hover img {
+  opacity: 1;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: right;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.28);
+}
+
+.footer-nav a {
+  color: rgba(255,255,255,0.32);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: rgba(255,255,255,0.72);
+  background: rgba(255,255,255,0.06);
+}
+
+.footer-nav-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 0 16px 110px;
+  }
+
+  .footer-top-divider {
+    margin-bottom: 30px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo-text {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    align-items: center;
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    width: 100%;
+  }
+
+  .footer-social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .footer-social-link:active {
+    transform: scale(0.95);
+  }
+
+  .footer-social-link img {
+    width: 20px;
+    height: 20px;
+  }
+}
+</style>
+
+<footer class="site-footer" role="contentinfo">
+
+  <div class="footer-top-divider" aria-hidden="true"></div>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <span class="footer-logo-text">ValuGrowthMedia</span>
+      <p class="footer-tagline">Strategy, production &amp; editing for brands that want to grow visibly.</p>
+    </div>
+
+    <div class="footer-social-row" aria-label="Social Media">
+      <a class="footer-social-link" href="https://www.instagram.com/valu.growthmedia_/" target="_blank" rel="noopener" aria-label="ValuGrowthMedia on Instagram">
+        <img src="../Bilder/instagram.png" alt="Instagram">
+      </a>
+      <a class="footer-social-link" href="https://www.tiktok.com/@valu.growthmedia" target="_blank" rel="noopener" aria-label="ValuGrowthMedia on TikTok">
+        <img src="../Bilder/tiktok.png" alt="TikTok">
+      </a>
+      <a class="footer-social-link" href="https://www.youtube.com/@VALUGrowthMedia" target="_blank" rel="noopener" aria-label="ValuGrowthMedia on YouTube">
+        <img src="../Bilder/youtube.png" alt="YouTube">
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 ValuGrowthMedia &mdash; All rights reserved</p>
+      <nav class="footer-nav" aria-label="Legal links">
+        <a href="../impressum.html">Imprint</a>
+        <span class="footer-nav-dot" aria-hidden="true"></span>
+        <a href="../datenschutz.html">Privacy Policy</a>
+      </nav>
+    </div>
+
   </div>
-  <div class="footer-signature">
-  VALUGROWTHMEDIA
-</div>
 
-<div class="footer-links">
-    <a href="../impressum.html">Imprint</a>
-    <span>•</span>
-    <a href="../datenschutz.html">Privacy Policy</a>
-</div>
-
-</div>
+</footer>
 
 <nav class="mobile-dock" aria-label="Quick access">
   <a href="#prozess">Process</a>
