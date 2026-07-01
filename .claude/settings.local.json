@@ -8,7 +8,12 @@
       "Bash(gh auth *)",
       "Bash(git checkout *)",
       "Bash(choco install *)",
-      "Bash(winget install *)"
+      "Bash(winget install *)",
+      "Bash(awk 'NR>=4866 && NR<=4898 {printf \"%d:%s$\\\\n\", NR, $0}' \"Website Für Valu/en/index.html\")",
+      "Bash(xxd)",
+      "Bash(python3 -)",
+      "PowerShell(python --version)",
+      "Bash(env)"
     ]
   }
 }
