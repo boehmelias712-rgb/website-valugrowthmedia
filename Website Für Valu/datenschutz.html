@@ -4,71 +4,169 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Datenschutz | ValuGrowthMedia</title>
+<title>Datenschutz — ValuGrowthMedia</title>
+<meta name="description" content="Datenschutzerklärung von ValuGrowthMedia.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0a100f">
+<link rel="icon" href="Bilder/logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background: #000;
-  color: white;
-  font-family: Arial, sans-serif;
+:root {
+  --ink: #07110f;
+  --obsidian: #0a100f;
+  --ivory: #faf7ef;
+  --muted: rgba(250,247,239,0.7);
+  --line: rgba(250,247,239,0.14);
+  --mint: #8ce7c6;
 }
 
-.container {
-  max-width: 900px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    linear-gradient(180deg, #0a100f 0%, #101917 46%, #0a100f 100%);
+  color: var(--ivory);
+  font-family: 'Manrope', Arial, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background: rgba(140,231,198,0.85);
+  color: var(--ink);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 70px 40px;
+  padding: 28px 24px 0;
+}
+
+.wordmark {
+  font-family: 'Sora', 'Manrope', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ivory);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wordmark em {
+  font-style: normal;
+  color: var(--mint);
 }
 
 .back-link {
-  display: inline-block;
-  margin-bottom: 30px;
-
-  color: rgba(255,255,255,0.65);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 600;
   text-decoration: none;
-
-  transition: 0.3s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .back-link:hover {
-  color: white;
+  color: var(--ivory);
+  border-color: rgba(140,231,198,0.4);
+  background: rgba(140,231,198,0.08);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.kicker {
+  display: block;
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 h1 {
-  font-size: 38px;
+  font-family: 'Sora', 'Manrope', Arial, sans-serif;
+  font-size: clamp(34px, 6vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   margin-bottom: 40px;
+  hyphens: auto;
 }
 
 h2 {
-  font-size: 22px;
-  margin-top: 40px;
-  margin-bottom: 15px;
+  font-family: 'Sora', 'Manrope', Arial, sans-serif;
+  font-size: clamp(19px, 2.4vw, 23px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 44px 0 16px;
+}
+
+h2:first-of-type {
+  margin-top: 0;
 }
 
 p {
-  color: rgba(255,255,255,0.75);
+  color: var(--muted);
+  font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  max-width: 640px;
 }
 
+a {
+  color: var(--mint);
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  padding: clamp(24px, 4.5vw, 44px);
+}
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+  <a class="wordmark" href="index.html" aria-label="ValuGrowthMedia Startseite">ValuGrowth<em>Media</em></a>
+  <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+</div>
+
 <div class="container">
 
-<a href="index.html" class="back-link">
-← Zurück zur Startseite
-</a>
+<span class="kicker">Rechtliches</span>
+<h1>Datenschutz&shy;erklärung</h1>
 
-<h1>Datenschutzerklärung</h1>
+<div class="card">
 
 <h2>1. Verantwortlicher</h2>
 
@@ -119,6 +217,8 @@ Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezo
 <p>
 Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
 </p>
+
+</div>
 
 </div>
 

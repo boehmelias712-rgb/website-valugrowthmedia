@@ -822,3 +822,42 @@
     initThreeStage();
   });
 })();
+
+/* Offscreen-Videos pausieren: 8 Autoplay-Loops gleichzeitig kosten
+   CPU, Akku und Bandbreite — abspielen soll nur, was sichtbar ist. */
+(function () {
+  "use strict";
+
+  function initVideoManager() {
+    if (!("IntersectionObserver" in window)) return;
+
+    var videos = Array.prototype.slice.call(document.querySelectorAll("video[autoplay]"));
+    if (!videos.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var video = entry.target;
+        if (entry.isIntersecting) {
+          if (video.paused) {
+            var playing = video.play();
+            if (playing && typeof playing.catch === "function") {
+              playing.catch(function () {});
+            }
+          }
+        } else if (!video.paused) {
+          video.pause();
+        }
+      });
+    }, { rootMargin: "120px 0px" });
+
+    videos.forEach(function (video) {
+      observer.observe(video);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initVideoManager);
+  } else {
+    initVideoManager();
+  }
+})();

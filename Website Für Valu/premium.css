@@ -4033,3 +4033,224 @@ body {
     height: 104px !important;
   }
 }
+
+/* ============================================================
+   REFINEMENT LAYER — finaler Premium-Pass
+   Konsistente Navigation, ruhige Details, präzise Typografie.
+   Liegt bewusst am Dateiende und gewinnt damit die Kaskade.
+   ============================================================ */
+
+/* ---- Navigation: dunkles Glas, auf hellem Hero wie auf dunklen
+       Sektionen gleich lesbar (ein Look statt zwei kaputter) ---- */
+.navbar,
+.navbar.scrolled,
+.navbar.is-scrolled {
+  top: 20px !important;
+  width: min(1240px, calc(100% - 48px)) !important;
+  height: 64px !important;
+  padding: 0 10px 0 22px !important;
+  border: 1px solid rgba(250,247,239,0.1) !important;
+  border-radius: 16px !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0) 55%),
+    rgba(9,14,13,0.72) !important;
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.38),
+    inset 0 1px 0 rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(26px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(1.3) !important;
+}
+
+.navbar::before {
+  display: none !important;
+}
+
+.nav-links,
+.language-switcher {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.menu a,
+.language-switcher a {
+  color: rgba(250,247,239,0.66) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.menu a:hover,
+.nav-links a:hover {
+  color: var(--vgm-ivory) !important;
+  background: rgba(255,255,255,0.07) !important;
+  box-shadow: none !important;
+}
+
+.menu a.nav-active {
+  color: var(--vgm-ivory) !important;
+  background: rgba(140,231,198,0.14) !important;
+  box-shadow: none !important;
+}
+
+.language-switcher {
+  padding: 3px !important;
+  border: 1px solid rgba(250,247,239,0.12) !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.045) !important;
+}
+
+.language-switcher a {
+  min-width: 40px !important;
+  min-height: 32px !important;
+  border-radius: 999px !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+.language-switcher .active-lang {
+  color: var(--vgm-ink) !important;
+  background: var(--vgm-ivory) !important;
+}
+
+/* Text-Wortmarke statt unleserlichem Badge-Logo */
+.logo {
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+.logo .logo-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  font-family: 'Sora', 'Manrope', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--vgm-ivory);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.logo .logo-wordmark em {
+  font-style: normal;
+  color: var(--vgm-mint);
+}
+
+.logo:hover .logo-wordmark {
+  opacity: 0.85;
+}
+
+/* ---- Scroll-Fortschritt: eine feine Linie statt Regenbogen,
+       und nur eine Implementierung ---- */
+.scroll-progress {
+  display: none !important;
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 2000;
+  background: transparent;
+  pointer-events: none;
+}
+
+.scroll-progress-bar-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(140,231,198,0.65), var(--vgm-mint)) !important;
+  border-radius: 0 999px 999px 0;
+}
+
+/* ---- Typografie: ruhig, eng, ausbalanciert ---- */
+h1, h2, h3,
+.section-title,
+.stats-label,
+.vgm-contact-title {
+  text-wrap: balance;
+}
+
+.hero-content h1 {
+  letter-spacing: -0.028em !important;
+}
+
+.section-title,
+.stats-label,
+.vgm-contact-title,
+.portfolio-copy .section-title {
+  letter-spacing: -0.02em !important;
+}
+
+.hero-content p,
+.section-copy,
+.portfolio-copy p,
+.vgm-contact-copy {
+  text-wrap: pretty;
+}
+
+/* ---- Systemdetails ---- */
+html {
+  scroll-padding-top: 108px;
+}
+
+::selection {
+  background: rgba(140,231,198,0.85);
+  color: #07110f;
+}
+
+html {
+  scrollbar-color: rgba(250,247,239,0.22) #0a100f;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a100f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(250,247,239,0.18);
+  border-radius: 999px;
+  border: 2px solid #0a100f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250,247,239,0.3);
+}
+
+/* Ripple auf hellen Buttons dunkel statt weiß, sonst unsichtbar */
+.btn .ripple,
+.cta-btn .ripple,
+.brief-cta .ripple,
+.vgm-submit .ripple {
+  background: rgba(7,17,15,0.18) !important;
+}
+
+/* ---- Mobile Feinschliff ---- */
+@media (max-width: 920px) {
+  .navbar,
+  .navbar.scrolled,
+  .navbar.is-scrolled {
+    top: 12px !important;
+    width: calc(100% - 24px) !important;
+    height: 58px !important;
+    padding: 0 8px 0 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .logo .logo-wordmark {
+    font-size: 15.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar {
+    display: none;
+  }
+}
