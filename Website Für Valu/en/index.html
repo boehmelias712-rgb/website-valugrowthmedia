@@ -15,15 +15,16 @@
     <meta property="og:title" content="ValuGrowthMedia — Social-first Content Studio">
     <meta property="og:description" content="Strategy, production and editing for brands that want to grow visibly.">
     <meta property="og:url" content="https://valugrowthmedia.com/en/">
-    <meta property="og:image" content="https://valugrowthmedia.com/Bilder/logo.png">
+    <meta property="og:image" content="https://valugrowthmedia.com/Bilder/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../Bilder/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="../Bilder/logo.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="../fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../fonts/fonts.css">
 
 <style>
   html, body {
@@ -4015,6 +4016,87 @@ body {
 
 </style>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://valugrowthmedia.com/#org",
+      "name": "ValuGrowthMedia",
+      "url": "https://valugrowthmedia.com/",
+      "logo": "https://valugrowthmedia.com/Bilder/logo.png",
+      "image": "https://valugrowthmedia.com/Bilder/og-image.jpg",
+      "description": "Social-first content studio: strategy, production and editing for brands that want to grow visibly.",
+      "email": "info@valugrowthmedia.com",
+      "telephone": "+49 179 4404246",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westendstraße 9",
+        "postalCode": "64846",
+        "addressLocality": "Groß-Zimmern",
+        "addressCountry": "DE"
+      },
+      "founder": [
+        { "@type": "Person", "name": "Elias Böhm" },
+        { "@type": "Person", "name": "Ismael Gabdou" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/valu.growthmedia_/",
+        "https://www.tiktok.com/@valu.growthmedia",
+        "https://www.youtube.com/@VALUGrowthMedia"
+      ],
+      "knowsAbout": ["Content Creation", "Social Media Marketing", "Video Editing", "Content Strategy"]
+    }
+    </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast will we see the first content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After kickoff we start with strategy. You will usually get the first finished clips within one to two weeks — after that, production runs on a steady rhythm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does working together cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the scope: a one-off project or monthly support. After a free initial assessment you get a clear quote — no hidden extras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which platforms do you produce for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Instagram Reels, TikTok and YouTube Shorts are the focus. Every format is planned and edited for its platform, not simply cross-posted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we have to be on camera ourselves?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Personal faces often perform best — but we also build formats around your product, your team or pure motion design if that fits your brand better."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send us a short message about where you are and what you want to achieve. You will get an honest assessment and concrete next steps within 24 hours on business days."
+      }
+    }
+  ]
+}
+</script>
+
 <script src="../premium.js" defer></script>
 
 </head>
@@ -4033,7 +4115,7 @@ body {
   <div class="hero">
 
   <!-- VIDEO -->
-  <video autoplay muted loop playsinline preload="auto" class="bg-video">
+  <video autoplay muted loop playsinline preload="auto" poster="../Bilder/hero-poster.webp" class="bg-video">
     <source src="../Bilder/Intro.mp4" type="video/mp4">
   </video>
 
@@ -4531,7 +4613,42 @@ body {
 
 </div>
 
-<div class="section-divider"></div>
+
+<section class="vgm-faq" id="faq" aria-labelledby="faq-heading">
+  <div class="vgm-faq-shell">
+    <div class="vgm-faq-intro">
+      <span class="section-kicker">FAQ</span>
+      <h2 id="faq-heading" class="section-title">Common questions</h2>
+      <p>Answered briefly and honestly. Everything else is best sorted in a short call — no strings attached.</p>
+      <a href="#kontakt">Ask us directly</a>
+    </div>
+
+    <div class="vgm-faq-list">
+      <details class="vgm-faq-item">
+        <summary>How fast will we see the first content?</summary>
+        <p>After kickoff we start with strategy. You will usually get the first finished clips within one to two weeks — after that, production runs on a steady rhythm.</p>
+      </details>
+      <details class="vgm-faq-item">
+        <summary>What does working together cost?</summary>
+        <p>It depends on the scope: a one-off project or monthly support. After a free initial assessment you get a clear quote — no hidden extras.</p>
+      </details>
+      <details class="vgm-faq-item">
+        <summary>Which platforms do you produce for?</summary>
+        <p>Instagram Reels, TikTok and YouTube Shorts are the focus. Every format is planned and edited for its platform, not simply cross-posted.</p>
+      </details>
+      <details class="vgm-faq-item">
+        <summary>Do we have to be on camera ourselves?</summary>
+        <p>Not necessarily. Personal faces often perform best — but we also build formats around your product, your team or pure motion design if that fits your brand better.</p>
+      </details>
+      <details class="vgm-faq-item">
+        <summary>How do we get started?</summary>
+        <p>Send us a short message about where you are and what you want to achieve. You will get an honest assessment and concrete next steps within 24 hours on business days.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="section-separator"></div>
 
 <section id="kontakt" class="vgm-contact" aria-labelledby="vgm-contact-heading">
   <div class="vgm-contact-shell">
